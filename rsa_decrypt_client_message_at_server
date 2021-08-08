@@ -1,0 +1,4 @@
+#!/bin/bash
+# FILE=./6_priv_2048.txt
+# if test -f "$FILE"; then
+openssl rsautl -decrypt -inkey serverpriv.txt -in in.txt -out client_message_at_server

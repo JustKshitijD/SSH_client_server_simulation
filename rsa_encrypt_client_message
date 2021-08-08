@@ -1,0 +1,4 @@
+#!/bin/bash
+# FILE=./6_pub_2048.txt
+# if test -f "$FILE"; then
+openssl rsautl -in in.txt -out rsa_encrypted_message_for_server -encrypt -pubin -inkey server_pub_non_base64.txt

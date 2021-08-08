@@ -1,0 +1,30 @@
+Requirements:- 
+You will need pycrypto and pycryptodome package, which can be installed by "pip3 install pycrypto" and "pip3 install pycryptodome"
+
+Edit the line "pt = strxor(strxor(self._last_ct, partial), self._k2)" to the line "pt = strxor(strxor(self._last_ct, bytes(partial)), self._k2)" in the file "python3.7/site-packages/Crypto/Hash/CMAC.py". 
+
+
+
+
+Steps:-
+1) Start server by- "python sshserver.py 12345"
+where, 12345 is the port on which server listens. You can change this value.
+
+2) Start client by- "python ssh client"
+
+3) After these steps, server waits to get client messages. 
+In client's terminal, type- 
+"ssh 12345 kshitijj"
+where, 12345 is server's port and kshitijj is username. This informs the client about server and username.  
+
+In case of 2 different machines, use- 
+"ssh 192.168.1.11 12345 kshitijj", 
+where 192.168.1.11 is the server's IP address.
+
+Note that if the given username is being used for the first time, then, modify line number 26 of sshserver.py, to change username to the new username. You can find the previously known users in the UserCredentials file.
+
+4) Session has been created between server and client. 
+
+Use the commands- "listfiles", "cwd", "chgdir absolutepath", "cp absolute_Path_To_Source_File absolute_Path_To_Destination_File", "mv filename src dest" on client terminal, and see it getting printed on server terminal, and the returned value from server being printed to client terminal.
+
+Type "logout" at end to close session.

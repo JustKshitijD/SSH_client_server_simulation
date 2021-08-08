@@ -1,0 +1,7 @@
+I was able to create client's session on server, and modify files on server from client. 
+I sent AES-CCM encrypted commands from client to server for this, so no outsider could see the messages and decrypt them. That is secure communication.
+The username and password were stored in server, so it gave a real feel of client server communication.
+
+I enjoyed this assignment mostly, more than previous ones as this feels more practical.
+
+I didn't a proper working VM so getting communication between machines is a bit of a problem. It works fine on localhost though.
